@@ -1,0 +1,1 @@
+Start-Process pwsh.exe -ArgumentList "-WindowStyle Hidden -Command & '$PSScriptRoot\SwapMouseWheel.ps1'"

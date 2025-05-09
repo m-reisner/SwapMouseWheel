@@ -1,0 +1,55 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="select Scrolldirection" Height="230" Width="700"
+        Icon="[PSScriptRoot]\res\icon.png"
+        FontFamily="Segoe UI, Arial, sans-serif"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/> <!-- Bild-Spalte -->
+            <ColumnDefinition Width="Auto"/> <!-- Bild-Spalte -->
+            <ColumnDefinition Width="Auto"/> <!-- Bild-Spalte -->
+            <ColumnDefinition Width="Auto"/> <!-- Bild-Spalte -->
+            <ColumnDefinition Width="*"/> <!-- Text-Spalte -->
+            <ColumnDefinition Width="Auto"/> <!-- RadioButton-Spalte -->
+            <ColumnDefinition Width="Auto"/> <!-- RadioButton-Spalte -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Erste Zeile -->
+        <Image Source="[PSScriptRoot]\res\arrowUP.png"   Width="40" Height="20" Margin="5" Grid.Row="0" Grid.Column="0" />
+        <Image Source="[PSScriptRoot]\res\icon.png"      Width="40" Height="30" Margin="5" Grid.Row="0" Grid.Column="1" />
+        <Image Source="[PSScriptRoot]\res\arrowUP.png"   Width="40" Height="20" Margin="5" Grid.Row="0" Grid.Column="2" />
+        <Image Source="[PSScriptRoot]\res\content.png"   Width="40" Height="40" Margin="5" Grid.Row="0" Grid.Column="3" />
+        <Image Source="[PSScriptRoot]\res\apple.png"     Width="40" Height="40" Margin="5" Grid.Row="0" Grid.Column="4" />
+        <TextBlock Text="natural scrolling like MacOs." VerticalAlignment="Center" Margin="10,0" Grid.Row="0" Grid.Column="5" />
+        <RadioButton x:Name="rdb1" GroupName="Scrolldirection" VerticalAlignment="Center" Margin="10,0" IsChecked="True" Grid.Row="0" Grid.Column="6" />
+
+        <!-- Zweite Zeile -->
+        <Image Source="[PSScriptRoot]\res\arrowUP.png"   Width="40" Height="20" Margin="5" Grid.Row="1" Grid.Column="0" />
+        <Image Source="[PSScriptRoot]\res\icon.png"      Width="40" Height="30" Margin="5" Grid.Row="1" Grid.Column="1" />
+        <Image Source="[PSScriptRoot]\res\arrowDOWN.png" Width="40" Height="20" Margin="5" Grid.Row="1" Grid.Column="2" />
+        <Image Source="[PSScriptRoot]\res\content.png"   Width="40" Height="40" Margin="5" Grid.Row="1" Grid.Column="3" />
+        <Image Source="[PSScriptRoot]\res\microsoft.png" Width="40" Height="40" Margin="5" Grid.Row="1" Grid.Column="4" />
+        <TextBlock Text="avoid patent lawsuits scrolling like Microsoft." VerticalAlignment="Center" Margin="10,0" Grid.Row="1" Grid.Column="5" />
+        <RadioButton x:Name="rdb2" GroupName="Scrolldirection" VerticalAlignment="Center" Margin="10,0" Grid.Row="1" Grid.Column="6" />
+
+        <!-- Dritte Zeile: Button -->
+        <Button x:Name="btnApply" Content="Set Scrollwheel" 
+            Width="150" Height="40"
+            HorizontalAlignment="Center"
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7"
+            Margin="0,20,0,0" />
+
+        <!-- Vierte Zeile: Signature -->
+        <TextBlock Text="마틴" Foreground="#EF2B7C" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" />
+    </Grid>
+</Window>
